@@ -15,7 +15,7 @@ app.use(morgan('tiny'));
 app.use(express.json());
 
 // 挂载路由
-app.use('/api', require('./router'));
+app.use('/api', require('./app/router'));
 
 // 挂载统一处理错误中间件
 app.use(errorHandler());
