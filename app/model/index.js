@@ -7,7 +7,11 @@ const seq = new Sequelize({
   port: MySQL.port,
   username: MySQL.username,
   password: MySQL.password,
-  database: MySQL.database
+  database: MySQL.database,
+  pool: {
+    min: 2,
+    max: 10
+  }
 });
 
 // 测试数据库链接
